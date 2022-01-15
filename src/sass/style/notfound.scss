@@ -1,0 +1,47 @@
+.notfound{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4d295ccd;
+
+    .imgnot {
+        width: 650px;
+    }
+
+    .btn_back {
+        background-color: $DarkPurple;
+        color: white;
+        padding: 20px;
+        width: 20%;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 20px;
+        border-radius: 8px;
+        transition: background-color 1s;
+        
+        @media (hover:hover) {
+            &:hover {
+                background-color: $Purple;
+                transition: background-color 1s;
+            }
+        }
+
+    }
+}
+
+@media (max-width:500px) {
+
+    .notfound {
+        .imgnot {
+            width: 350px;
+
+        }
+
+        .btn_back {
+            width: 50%;
+            margin-top: 70px;
+        }
+    }
+}

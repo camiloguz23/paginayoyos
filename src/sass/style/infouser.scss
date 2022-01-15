@@ -1,0 +1,95 @@
+.search{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    
+    input {
+        border: transparent;
+        border-bottom: solid 2px $ligthPurple;
+        margin-right: 20px;
+        width: 40%;
+        
+        &:focus {
+           outline: none;
+        }
+    }
+
+    button {
+        background-color: $ligthPurple;
+        padding: 5px;
+        border-radius: 8px;
+        color: white;
+    }
+}
+
+.Infouser{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+
+    .Datauser {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .info {
+        width: 100%;
+        margin-top: 20px;
+        padding: 7px;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+    }
+
+    .employees {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    span {
+        background-color: $Purple;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+    }
+}
+.imgUser {
+    width: 450px;
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+@media (max-width:500px) {
+
+    .imgUser {
+        width: 250px;
+    }
+
+    .Infouser{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+
+        .info {
+            width: 400px;
+            margin-top: 20px;
+        }
+
+        .employees {
+            width: 400px;
+            padding: 20px;
+        }
+
+        h2{
+            margin-top: 20px;
+        }
+    }
+    
+}

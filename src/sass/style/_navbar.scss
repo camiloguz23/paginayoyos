@@ -1,0 +1,47 @@
+.navbar {
+    background-color: $Purple;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+
+    .link {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+        border-bottom: solid 1px transparent;
+        transition: border-bottom 1s;
+        padding: 5px;
+            
+
+        @media (hover:hover) {
+            &:hover {
+               
+                border-bottom: solid 1px white;
+                transition: border-bottom 1s;
+            }
+        }
+    }
+}
+
+.active {
+    background-color: $ligthPurple;
+    border-radius: 8px;
+    transition: background-color 1s, border-radius 1s;
+}
+
+@media (max-width:500px) {
+    .navbar {
+        background-color: $Purple;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+    
+        .link {
+            
+            font-size: 18px;
+            
+                
+        }
+    }
+    
+}
