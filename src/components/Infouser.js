@@ -14,6 +14,7 @@ export const Infouser = () => {
 
     const showUSer = async () => {
 
+        // esta funcion peticion de la url por medio fecth
         const path = await fetch("https://raw.githubusercontent.com/sapardo10/content/master/RH.json");
         const rep = await path.json()
         const {employees} = rep
@@ -27,19 +28,21 @@ export const Infouser = () => {
     }
 
     useEffect (() =>{
+        // al renderizar activa la funcion showUser
         showUSer()
     },[])
 
     
     const search_input = async (input_name) => {
 
+        // haces una busqueda de los datos de la url con el nombre ingresado y regresao en JSON el trbajador buscado
         const path = await fetch("https://raw.githubusercontent.com/sapardo10/content/master/RH.json");
         const rep = await path.json()
         const {employees} = rep
 
         const user = employees.filter((x) => (x.name == change))
         if (user[0]) {
-            const [userData] = user
+            const [userData] = user  // se hace una destruturacion d ela lista para obtener solo el indice 0
             setuserID(userData)
             dispatch(id_method(userData.id))
         } else {
@@ -51,6 +54,8 @@ export const Infouser = () => {
     }
 
     const addUser = (id) => {
+
+        // guarda el usario seleccionado como nuevo y lo agrega una lista en redux 
         const newEmployee = userID.employees.filter(x => x.id == id)
         const [add] = newEmployee
         dispatch( new_method(add) )

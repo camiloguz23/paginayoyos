@@ -1,9 +1,9 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import {NavLink,useParams} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 export const Navbar = () => {
-    const {id_user} = useParams()
+    
     const {Id_user} = useSelector(x => x)
     return (
         <nav className='navbar'>

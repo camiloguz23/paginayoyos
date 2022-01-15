@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 
 export const Newemployee = () => {
 
-    const {New_employee} = useSelector(x => x)
+    const {New_employee} = useSelector(x => x) // se obtiene los datos de redux
     return (
         <div className='body_new'>
             <div className='NewEmployee'>
@@ -13,7 +13,7 @@ export const Newemployee = () => {
                     <h2 className='title_employee'>New employees</h2>
 
                     <div className='listEmployee'>
-                        { New_employee.map(x=>(
+                        { New_employee.map(x=>( // se hace un mapeo de la lista que tenemso en redux de los nuevos empleado
                             <p key={x.id} className='contentEmployee'>{x.name}</p>
                         )) }
                     </div>
