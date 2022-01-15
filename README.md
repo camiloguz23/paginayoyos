@@ -12,6 +12,7 @@ Se lee un url par obtener los datos de los emploeados y mostrarlo en la pagina y
 *  en la carpeta **components** es donde estan todos los componentes hechos o que se utilizan 
 *  en la carpeta **pages** esta el archivo main.js donde es pagina principal del aplocacion
 *  en la carpeta **routes** esta todas las rutas que se usa y un arhivo layout que se usa para maquetado
+*  La carpeta **sass** esta el archuvo principal **style.scss** y esta la carpeta **style** que donde estan todos los archivos que use para dar estilo a la pagina
 
 ## instalaciones
 
